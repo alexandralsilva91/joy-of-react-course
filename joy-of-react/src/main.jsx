@@ -1,8 +1,9 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import Greetings, { Goodnight } from './componentes/Greetings';
 
 function Soma({ num1, num2 }) {
-    return <h2>{num1 + num2 + num3}</h2>
+    return <h2>{num1 + num2}</h2>
 }
 
 function Xana({ children }) {
@@ -35,5 +36,8 @@ createRoot(document.getElementById('root')).render(
         <Xana>                                 {/*Xana({ children: "Eu sou a Xana" }); */}
             Eu sou a Xana
         </Xana>
+        <Greetings name="Alexandra" isMorning={true} />
+        <Greetings name="Jacinta" isMorning={false} />
+        <Goodnight name="Victor" />
     </StrictMode>,
 );
