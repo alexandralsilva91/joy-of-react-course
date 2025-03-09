@@ -1,14 +1,9 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import Greetings, { Goodnight } from './componentes/Greetings';
-
-function Soma({ num1, num2 }) {
-    return <h2>{num1 + num2}</h2>
-}
-
-function Xana({ children }) {
-    return <h3>{children}</h3>
-}
+import Soma from './componentes/Soma';
+import Xana from './componentes/Xana';
+import Button from './componentes/Button';
 
 function HelloWorld({ name, children }) {
     const date = new Date();
@@ -39,5 +34,14 @@ createRoot(document.getElementById('root')).render(
         <Greetings name="Alexandra" isMorning={true} />
         <Greetings name="Jacinta" isMorning={false} />
         <Goodnight name="Victor" />
+        <Button onClick={() => console.log('uiii uiii uii')}>
+            Olá eu sou um botão
+        </Button>
+        <Button onClick={() => console.error('ai ai ai')}>
+            Olá eu sou outro botão
+        </Button>
+        <Button onClick={() => window.alert('Atenção!!!')}>
+            Atention!
+        </Button>
     </StrictMode>,
 );

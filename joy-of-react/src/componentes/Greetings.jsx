@@ -15,7 +15,7 @@ export function Goodnight({ name }) {
 
 function Greetings({ name, isMorning }) {
 
-    /*
+    /* Outra forma de fazer:
     if (isMorning) {
         return (
             <h1>Good morning, {name}</h1>
