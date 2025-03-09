@@ -1,8 +1,4 @@
-import { useState } from "react";
-
-function Button({ children, onClick }) {
-    const [count, setCount] = useState(0);
-
+function Button({ children, onClick, disabled = false }) {
     return (
         <button
             style={{
@@ -12,12 +8,10 @@ function Button({ children, onClick }) {
                 borderRadius: 4,
                 margin: 10
             }}
-            onClick={() => {
-                setCount(count + 1);
-                onClick();
-            }}
+            onClick={onClick}
+            disabled={disabled}
         >
-            {children} ({count})
+            {children}
         </button>
     )
 }

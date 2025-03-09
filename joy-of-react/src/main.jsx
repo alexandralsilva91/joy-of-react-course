@@ -4,6 +4,7 @@ import Greetings, { Goodnight } from './componentes/Greetings';
 import Soma from './componentes/Soma';
 import Xana from './componentes/Xana';
 import Button from './componentes/Button';
+import Counter from './componentes/Counter';
 
 function HelloWorld({ name, children }) {
     const date = new Date();
@@ -42,6 +43,7 @@ createRoot(document.getElementById('root')).render(
         </Button>
         <Button onClick={() => window.alert('Atenção!!!')}>
             Atention!
-        </Button>
+        </Button> {/*Button({ children: "Atention!", onClick: () =>  window.alert('Atenção!!!')}); */}
+        <Counter />
     </StrictMode>,
 );
