@@ -5,6 +5,7 @@ import Soma from './componentes/Soma';
 import Xana from './componentes/Xana';
 import Button from './componentes/Button';
 import Counter from './componentes/Counter';
+import Toggle from './componentes/Toggle';
 
 function HelloWorld({ name, children }) {
     const date = new Date();
@@ -45,5 +46,6 @@ createRoot(document.getElementById('root')).render(
             Atention!
         </Button> {/*Button({ children: "Atention!", onClick: () =>  window.alert('Atenção!!!')}); */}
         <Counter />
+        <Toggle />
     </StrictMode>,
 );
